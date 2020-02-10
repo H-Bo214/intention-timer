@@ -1,9 +1,7 @@
-/* // This h1 is within the header // */
 body {
   background-color: #2B2733;
   font-family: 'Montserrat', sans-serif;
 }
-
 /* background of main header */
 .header-one{
   background-color: #46424D;
@@ -14,13 +12,11 @@ body {
   top: 0;
   width: 100%;
 }
-
 /* h1 for the whole page */
 .h1-for-whole-page {
   color: #FFF;
   font-size: 25px;
 }
-
 /* main content */
 .all-content-of-page {
     margin-top: 6%;
@@ -28,28 +24,24 @@ body {
     display: grid;
     height: 35em;
 }
-
 /* all left content of main */
 .left-content-of-main {
     width: 96%;
 }
-
 /* new activity header */
 .h2-header-new-activity {
   margin: 0 1.3em;
-  color: #CBC9CF;
-  font-size: 1.5em;
+    color: #CBC9CF;
+    font-size: 1.5em;
 }
-
 /* all inner left content of main */
 .inner-left-content-of-main {
-  background-color: #46424D;
-  color: #FFF;
-  height: 38em;
-  margin: 1em 2em;
-  border-radius: 4px;
+    background-color: #46424D;
+    color: #FFF;
+    height: 38em;
+    margin: 1em 2em;
+    border-radius: 4px;
 }
-
 .select-a-category {
   margin-left: 5.9em;
   margin-bottom: 1%;
@@ -62,39 +54,39 @@ body {
   display: flex;
   margin: 0 13%;
   justify-content: space-between;
-
 }
 
 .category-choice-box {
-  width: 28%;
-  height: 4em;
-  border: solid 2px #fff;
-  display: inline-block;
-  text-align: center;
-  border-radius: 4px;
+    width: 28%;
+    height: 4em;
+    border: solid 2px #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
+}
+.study-box {
+
+}
+.meditate-box {
+
+}
+.exercise-box {
+
 }
 
+
 .category-img {
-  width: 15%;
-  margin-top: 8px;
+    width: 15%;
+    margin-top: 8px;
   }
-
-.category-img-active {
-  width: 15%;
-  margin-top: 8px;
-  }
-
 .p-study {
     margin-top: 0;
     margin-bottom: 0;
 }
-
-
 .p-meditate{
     margin-top: 0;
     margin-bottom: 0;
 }
-
 .p-exercise{
     margin-top: 0;
     margin-bottom: 0;
@@ -102,45 +94,37 @@ body {
 .user-paramaters{
   margin-top: 15%;
 }
-
 .warning{
-  margin-left: 13%;
+    margin-left: 13%;
 }
 .warning-img{
     display:inline-block;
     width: 0.9em;
   }
-  
   .warning-text{
       display:inline-block;
       font-size: 15px;
   }
-
 .title-of-input {
     display: block;
     padding-left: 13%;
     margin-bottom: 1.5em;
     font-size: 1em;
   }
-
   .users-goals-to-accomplish{
   display: block;
   background: transparent;
   border: none;
   border-bottom: 1px solid#CBC9CF;
-  /* width: 55em; */
-  width: 43em;
+  width: 55em;
   margin-left: 13%;
-  color: #FFF;
-  font-size: 14px;
+  color: #fff;
   }
-
 .parent-of-minutes-category {
   display: inline-block;
   margin-left: 6em;
   margin-top: 1em;
 }
-
 .parent-of-seconds-category {
     display: inline-block;
     margin-left: 4em;
@@ -148,42 +132,34 @@ body {
 }
 .title-of-input-minutes {
     display: block;
+    padding-left: 4%;
     margin-bottom: 1.5em;
     font-size: 1em;
-    padding-left: 4%;
     margin-top: 2em;
 }
-
 .title-of-input-seconds {
     display: block;
     margin-bottom: 1.5em;
     font-size: 1em;
 }
-
 .minutes{
     display: block;
     background: transparent;
     border: none;
     border-bottom: 1px solid#CBC9CF;
-    /* width: 23em; */
-    width: 19em;
+    width: 23em;
     margin-left: 1em;
-    color: #FFF;
-  
-    font-size: 14px;
+    color: #fff;
 }
 .seconds{
     display: block;
     background: transparent;
     border: none;
     border-bottom: 1px solid#CBC9CF;
-    /* width: 25.3em; */
-    width: 18.6em;
-    color: #FFF;
-    font-size: 14px;
+    width: 25.3em;
+    color: #fff;
 }
-
-.start-activity {
+#start-activity {
   display: block;
   border-radius: 4px;
   margin-top: 3em;
@@ -194,20 +170,18 @@ body {
   text-align: center;
   color:gray;
   width: 23%;
-  
 
 }
 .right-content-of-main {
     color: #CBC9CF;
     border-left:1px solid gray;
     margin-top: -6%;
-    margin-bottom: -9%;
+    margin-bottom: -8%;
 }
 .past-activities {
     font-size: 1.5em;
     padding-left: 1em;
     margin-top: 32px;
-
 }
 .user-logged-info {
     padding-left: 1em;
@@ -216,7 +190,6 @@ body {
     text-align: center;
     margin-left: 3em;
 }
-
 .current-activity-page{
     width: 96%;
   }
@@ -243,7 +216,8 @@ body {
     font-size: 5em;
     margin: 0;
   }
-  #task-start{
+  #task-start,
+  #task-complete {
     font-size: 1.5em;
       display: block;
       margin: 5% 0 7% 36.2%;
@@ -270,7 +244,7 @@ body {
     margin: 1em 2em;
     text-align: center;
   }
-  #task-complete{
+  /* #task-complete{
     font-size: 1.5em;
       display: block;
       margin: 5% 0 7% 36.2%;
@@ -280,8 +254,9 @@ body {
       border: 3px solid #C278FD;
       background-color: #46424D;
       line-height: 230px;
+      color: #fff; */
   }
-  .log-activity-button {
+  #log-activity-button {
     width: 23%;
     height: 32px;
     font-size: 1em;
@@ -297,17 +272,10 @@ body {
     margin: 1em 2em;
     text-align: center;
   }
-  .create-activity-button{
+  #create-activity-button{
     height: 32px;
     font-size: 1em;
     border-radius: 2%;
     width: 40%;
     margin-top: 10%;
   }
-
-
-
-
-
-
-
