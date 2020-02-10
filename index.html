@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intension_Timer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header-one">
+    <h1 class="h1-for-whole-page">INTENTION TIMER</h1>
+  </header>
+  <main class="all-content-of-page" >
+
+    <section class="left-content-of-main" >   <!-- hidden page1 -->
+      <header>
+        <h2 class="h2-header-new-activity">New Activity</h2>
+      </header>
+      <div class="inner-left-content-of-main">
+          <p class="select-a-category">Select a category:</p>
+          <div class="category-wrapper">
+          <section class="category-choice-box study-box">
+            <img class="category-img lightbulb-img" src="assets/study.svg" alt="Lightbulb illuminating a book">
+            <img class="category-img lightbulb-img-active" src='assets/study-active.svg' alt="Lightbulb illuminating a book" hidden>
+            <p class="p-study">Study</p>
+          </section>
+          <section class="category-choice-box meditate-box">
+            <img class="category-img lotus-img" src="assets/meditate.svg" alt="An opening lotus flower">
+            <img class="category-img lotus-img-active" src='assets/meditate-active.svg' alt="An opening lotus flower" hidden>
+            <p class="p-meditate">Meditate</p>
+          </section>
+          <section class="category-choice-box exercise-box">
+            <img class="category-img running-shoe-img" src="assets/exercise.svg" alt="A shoe in a running motion">
+            <img class="category-img running-shoe-img-active" src='assets/exercise-active.svg' alt="A shoe in a running motion" hidden>
+            <p class="p-exercise">Exercise</p>
+          </section>
+        </div>
+
+        <form class="user-paramaters" action="index.html" method="post">
+          <label class="title-of-input" for="user-goal">What would you like to accomplish during this time?</label>
+          <input class="users-goals-to-accomplish" type="text" name="user-goal" value="">
+          <section class="warning" hidden>
+            <img class="warning-img" src="assets/warning.svg" alt="Warning image for leaving the input field empty">
+            <p class="warning-text">A description is required.</p>
+          </section>
+          <div class="parent-of-minutes-category">
+            <label class="title-of-input-minutes" for="time-in-minutes">Minutes</label>
+            <input class="minutes" type="number" name="time-in-minutes" value="">
+          </div>
+          <div class="parent-of-seconds-category">
+            <label class="title-of-input-seconds" for="time-in-seconds">Seconds</label>
+            <input class="seconds" type="number" name="time-in-seconds" value="">
+          </div>
+          <button id="start-activity" type="submit" name="submit-button">START ACTIVITY</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="current-activity-page" hidden>
+      <header>
+        <h2 class="current-activity-title">Current Activity</h2>
+      </header>
+      <div class="current-activity-container">
+        <p id="users-first-input-field"></p>
+        <p id="time-counter"></p>
+        <button id="task-start" type="button" name="button">START</button>
+      </div>
+    </section>
+
+    <section class="current-activity-complete-page" hidden>
+      <header>
+        <h2 class="current-activity-complete-title">Current Activity</h2>
+      </header>
+      <div class="current-activity-complete-container">
+        <p id="users-first-input-field">Deep Breathing</p>
+        <p id="time-counter">00:00</p>
+        <div id="task-complete">COMPLETE!</div>
+        <button id="log-activity-button" type="button" name="log-activity">LOG ACTIVITY</button>
+      </div>
+    </section>
+
+    <section class="log-activity-page" hidden>
+      <header>
+        <h2 class="current-activity-title">Completed Activity</h2>
+      </header>
+      <div class="log-activity-complete-container">
+          <button id="create-activity-button" type="button" name="create-activity">CREATE A NEW ACTIVITY</button>
+      </div>
+    </section>
+
+
+    <aside class="right-content-of-main">
+      <p class="past-activities">Past Activities</p>
+      <p class="user-logged-info">You haven't logged any activities yet. Complete the form to the left to get started.</p>
+    </aside>
+
+  </main>
+
+
+
+
+
+  <footer>
+    <script src="main.js" language="javaScript" charset="utf-8" type="text/javaScript"></script>
+  </footer>
+</body>
+
+</html>
