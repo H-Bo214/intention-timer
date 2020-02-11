@@ -149,6 +149,12 @@ function changePage1 () {
   if (selectedCategory === "study") {
     page2StartButton.classList.add('study-timer-border');
   }
+  if (selectedCategory === "meditate") {
+    page2StartButton.classList.add('meditate-timer-border');
+  }
+  if (selectedCategory === "exercise") {
+    page2StartButton.classList.add('exercise-timer-border');
+  }
 }
 
 

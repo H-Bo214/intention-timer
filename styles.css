@@ -65,14 +65,16 @@ body {
     border-radius: 4px;
 }
 .study-timer-border {
-  border: 4px solid green;
-  background-color: grey;
+  border: 4px solid #B3FD78;
+  background-color: #46424D;
 }
 .meditate-timer-border {
-
+  border: 4px solid #C278FD;
+  background-color: #46424D;
 }
-.exercise-box {
-
+.exercise-timer-border {
+  border: 4px solid #FD8078;
+  background-color: #46424D;
 }
 
 
