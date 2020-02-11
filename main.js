@@ -154,6 +154,7 @@ function changePage1 () {
   }
   if (selectedCategory === "exercise") {
     page2StartButton.classList.add('exercise-timer-border');
+    console.log(page2StartButton.classList);
   }
 }
 

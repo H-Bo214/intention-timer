@@ -282,8 +282,6 @@ body {
 /* <div> for complete activity icon */
 #task-start,
 #task-complete {
-  background-color: #46424D;
-  border: 3px solid #C278FD;
   border-radius: 50%;
   color: #fff;
   display: block;
