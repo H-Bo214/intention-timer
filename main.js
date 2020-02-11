@@ -27,9 +27,10 @@ var seconds = document.querySelector(".seconds");
 var page1 = document.querySelector('.left-content-of-main');
 var page2 = document.querySelector('.current-activity-page');
 
-// create var for the page2 user goal input, minutes and seconds
+// create var for the page2 user goal input, minutes and seconds and button
 var page2UserGoal = document.getElementById('users-first-input-field');
 var page2TimeCounter = document.getElementById('time-counter');
+var page2StartButton = document.getElementById('task-start')
 // create a addEventListener to each var that was created for study, meditate, exersise
 study.addEventListener('click', clickStudy);
 meditate.addEventListener('click', clickMeditate);
@@ -98,6 +99,7 @@ function clickExercise() {
 function onStartActivity(event) {
   event.preventDefault();
   validateCategory()
+
 }
 
 function validateCategory() {
@@ -144,8 +146,16 @@ function changePage1 () {
   page2.hidden = false;
   page2UserGoal.innerText = userGoal.value
   page2TimeCounter.innerText = `${minutes.value}:${seconds.value}`;
+  if (selectedCategory === "study") {
+    page2StartButton.classList.add('study-timer-border');
+  }
+  if (selectedCategory === "meditate") {
+    page2StartButton.classList.add('meditate-timer-border');
+  }
+  if (selectedCategory === "exercise") {
+    page2StartButton.classList.add('exercise-timer-border');
+  }
 }
-
 
 
 
