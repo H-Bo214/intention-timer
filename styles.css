@@ -2,7 +2,8 @@ body {
   background-color: #2B2733;
   font-family: 'Montserrat', sans-serif;
 }
-/* background of main header */
+
+/* background of main header of whole page*/
 .header-one{
   background-color: #46424D;
   height: 8%;
@@ -12,270 +13,333 @@ body {
   top: 0;
   width: 100%;
 }
+
 /* h1 for the whole page */
 .h1-for-whole-page {
   color: #FFF;
   font-size: 25px;
 }
-/* main content */
+
+/* <main> main content wrapper*/
 .all-content-of-page {
-    margin-top: 6%;
-    grid-template-columns: 4fr 2.2fr;
-    display: grid;
-    height: 35em;
+  display: grid;
+  grid-template-columns: 4fr 2.2fr;
+  height: 35em;
+  margin-top: 6%;
 }
-/* all left content of main */
+
+/* <section> all left content of main */
 .left-content-of-main {
-    width: 96%;
+  width: 96%;
 }
+
 /* new activity header */
 .h2-header-new-activity {
+  color: #CBC9CF;
+  font-size: 1.5em;
   margin: 0 1.3em;
-    color: #CBC9CF;
-    font-size: 1.5em;
 }
+
 /* all inner left content of main */
 .inner-left-content-of-main {
-    background-color: #46424D;
-    color: #FFF;
-    height: 38em;
-    margin: 1em 2em;
-    border-radius: 4px;
-}
-.select-a-category {
-  margin-left: 5.9em;
-  margin-bottom: 1%;
-  font-size: 1.1em;
-  padding-top: 3em;
-  padding-bottom: 0.8em;
+  background-color: #46424D;
+  border-radius: 4px;
+  color: #FFF;
+  height: 38em;
+  margin: 1em 2em;
+
 }
 
+/* <p> select a category: */
+.select-a-category {
+  font-size: 1.1em;
+  margin: 0 0 1% 5.9em;
+  padding: 3em 0 0.8em 0;
+}
+
+
+/* <div> wrapper to all category choice boxes */
 .category-wrapper {
   display: flex;
-  margin: 0 13%;
   justify-content: space-between;
+  margin: 0 13%;
 }
 
+/* <section> shared class for category each boxes */
 .category-choice-box {
-    width: 28%;
-    height: 4em;
-    border: solid 2px #fff;
-    display: inline-block;
-    text-align: center;
-    border-radius: 4px;
-}
-.study-box {
-
-}
-.meditate-box {
-
-}
-.exercise-box {
-
+  border-radius: 4px;
+  border: solid 2px #fff;
+  display: inline-block;
+  height: 4em;
+  text-align: center;
+  width: 28%;
 }
 
+/* borders for each start activity button on page2 */
+.study-timer-border {
+  border: 4px solid #B3FD78;
+  background-color: #46424D;
+}
 
+/* borders for each start activity button on page2 */
+.meditate-timer-border {
+  border: 4px solid #C278FD;
+  background-color: #46424D;
+}
+
+/* borders for each start activity button on page2 */
+.exercise-timer-border {
+  border: 4px solid #FD8078;
+  background-color: #46424D;
+}
+
+/* <img> shared class for the img in category boxes */
 .category-img {
-    width: 15%;
-    margin-top: 8px;
+  margin-top: 8px;
+  width: 15%;
   }
+
+  /* <p> for study category box */
 .p-study {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
+
+/* <p> for meditate category box */
 .p-meditate{
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
+
+/* <p> for exercise category box */
 .p-exercise{
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
+
+/* <form> all of the form */
 .user-paramaters{
   margin-top: 15%;
 }
-.warning{
-    margin-left: 13%;
-}
-.warning-img{
-    display:inline-block;
-    width: 0.9em;
-  }
-  .warning-text{
-      display:inline-block;
-      font-size: 15px;
-  }
+
+/* <label> shared class for label in <form> */
 .title-of-input {
-    display: block;
-    padding-left: 13%;
-    margin-bottom: 1.5em;
-    font-size: 1em;
-  }
-  .users-goals-to-accomplish{
   display: block;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  padding-left: 13%;
+  }
+
+/* <input> what they want to accomplish input*/
+.users-goals-to-accomplish{
   background: transparent;
   border: none;
   border-bottom: 1px solid#CBC9CF;
-  width: 55em;
-  margin-left: 13%;
   color: #fff;
+  display: block;
+  margin-left: 13%;
+  width: 55em;
   }
+
+/* <section> warning wrapper for error message */
+.warning{
+  margin-left: 13%;
+}
+
+/* <img> warning error message img */
+.warning-img{
+  display:inline-block;
+  width: 0.9em;
+  }
+
+/* <p> warning error message text */
+.warning-text{
+  display:inline-block;
+  font-size: 15px;
+  }
+
+/* <div> wrapper of entire minutes label and input */
 .parent-of-minutes-category {
   display: inline-block;
-  margin-left: 6em;
-  margin-top: 1em;
+  margin: 1em 0 0 6em;
 }
-.parent-of-seconds-category {
-    display: inline-block;
-    margin-left: 4em;
-    margin-top: 1em;
-}
-.title-of-input-minutes {
-    display: block;
-    padding-left: 4%;
-    margin-bottom: 1.5em;
-    font-size: 1em;
-    margin-top: 2em;
-}
-.title-of-input-seconds {
-    display: block;
-    margin-bottom: 1.5em;
-    font-size: 1em;
-}
-.minutes{
-    display: block;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid#CBC9CF;
-    width: 23em;
-    margin-left: 1em;
-    color: #fff;
-}
-.seconds{
-    display: block;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid#CBC9CF;
-    width: 25.3em;
-    color: #fff;
-}
-#start-activity {
-  display: block;
-  border-radius: 4px;
-  margin-top: 3em;
-  margin-left: 31.7em;
-  line-height: 2;
-  padding: 0px 18px;
-  font-size: 1rem;
-  text-align: center;
-  color:gray;
-  width: 23%;
 
+/* <label> of minutes in form */
+.title-of-input-minutes {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 2em 0 1.5em 0;
+  padding-left: 4%;
 }
+
+/* <input> for minutes in form */
+.minutes{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid#CBC9CF;
+  color: #fff;
+  display: block;
+  margin-left: 1em;
+  width: 23em;
+}
+
+/* <div> wrapper of entire seconds label and input */
+.parent-of-seconds-category {
+  display: inline-block;
+  margin: 1em 0 0 4em;
+}
+
+/* <label> of seconds in form */
+.title-of-input-seconds {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+/* <input> for seconds in form */
+.seconds{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid#CBC9CF;
+  display: block;
+  color: #fff;
+  width: 25.3em;
+}
+
+/* <button> start activity button */
+#start-activity {
+  color:gray;
+  border-radius: 4px;
+  display: block;
+  font-size: 1rem;
+  line-height: 2;
+  margin: 3em 0 0 31.7em;
+  padding: 0px 18px;
+  text-align: center;
+  width: 23%;
+}
+
+/* <aside> place for card holder on the right of page */
 .right-content-of-main {
-    color: #CBC9CF;
-    border-left:1px solid gray;
-    margin-top: -6%;
-    margin-bottom: -8%;
+  border-left:1px solid gray;
+  color: #CBC9CF;
+  margin-top: -6% 0 -8% 0;
 }
+
+/* <p> text for header of past activities */
 .past-activities {
-    font-size: 1.5em;
-    padding-left: 1em;
-    margin-top: 32px;
+  font-size: 1.5em;
+  margin-top: 32px;
+  padding-left: 1em;
 }
+
+/* <p> text for indication of where cards are held */
 .user-logged-info {
-    padding-left: 1em;
-    padding-left: 1em;
-    width: 74%;
-    text-align: center;
-    margin-left: 3em;
+  margin-left: 3em;
+  padding-left: 1em;
+  text-align: center;
+  width: 74%;
 }
+
+/* CHANGE OF PAGES TO PAGE2 */
+/* <section> wrapper of entire page2 */
 .current-activity-page{
-    width: 96%;
+  width: 96%;
   }
-  .current-activity-title{
-    margin: 0 1.3em;
-    color: #CBC9CF;
-    font-size: 1.5em;
+
+/* <h2> for current activity on page2 and page4 */
+.current-activity-title{
+  color: #CBC9CF;
+  font-size: 1.5em;
+  margin: 0 1.3em;
   }
-  .current-activity-container{
-    background-color: #46424D;
-    color: #FFF;
-    height: 37em;
-    margin: 1em 2em;
-    text-align: center;
-  }
-  #users-first-input-field {
-    text-align: center;
-    padding-top: 8%;
-    font-size: 1.5em;
-    margin-bottom: 0;
-  }
-  #time-counter {
-    text-align: center;
-    font-size: 5em;
-    margin: 0;
-  }
-  #task-start,
-  #task-complete {
-    font-size: 1.5em;
-      display: block;
-      margin: 5% 0 7% 36.2%;
-      border-radius: 50%;
-      height: 230px;
-      width: 230px;
-      border: 3px solid #C278FD;
-      background-color: #46424D;
-      color: #fff;
-  }
-  /* complete activity page */
-  .current-activity-complete-page{
-    width: 96%;
-  }
-  .current-activity-complete-title{
-    margin: 0 1.3em;
-    color: #CBC9CF;
-    font-size: 1.5em;
-  }
-  .current-activity-complete-container{
-    background-color: #46424D;
-    color: #FFF;
-    height: 37em;
-    margin: 1em 2em;
-    text-align: center;
-  }
-  /* #task-complete{
-    font-size: 1.5em;
-      display: block;
-      margin: 5% 0 7% 36.2%;
-      border-radius: 50%;
-      height: 230px;
-      width: 230px;
-      border: 3px solid #C278FD;
-      background-color: #46424D;
-      line-height: 230px;
-      color: #fff; */
-  }
-  #log-activity-button {
-    width: 23%;
-    height: 32px;
-    font-size: 1em;
-    border-radius: 2%;
-  }
-  .log-activity-page{
-    width: 96%;
-  }
-  .log-activity-complete-container {
-    background-color: #46424D;
-    color: #FFF;
-    height: 37em;
-    margin: 1em 2em;
-    text-align: center;
-  }
-  #create-activity-button{
-    height: 32px;
-    font-size: 1em;
-    border-radius: 2%;
-    width: 40%;
-    margin-top: 10%;
-  }
+
+/* <div> complete activity page */
+.current-activity-container{
+  background-color: #46424D;
+  color: #FFF;
+  height: 37em;
+  margin: 1em 2em;
+  text-align: center;
+}
+
+/* <p> input from what to accomplish page2 */
+#users-first-input-field {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  padding-top: 8%;
+  text-align: center;
+}
+
+/* <p> display of time on page2 */
+#time-counter {
+  font-size: 5em;
+  margin: 0;
+  text-align: center;
+}
+
+/* <button> start activity */
+/* <div> for complete activity icon */
+#task-start,
+#task-complete {
+  background-color: #46424D;
+  border: 3px solid #C278FD;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  font-size: 1.5em;
+  height: 230px;
+  margin: 5% 0 7% 36.2%;
+  width: 230px;
+}
+
+/* <section> complete activity page3 */
+.current-activity-complete-page{
+  width: 96%;
+}
+
+/* <h2> title for the newly desplayed info on page3 */
+.current-activity-complete-title{
+  color: #CBC9CF;
+  font-size: 1.5em;
+  margin: 0 1.3em;
+}
+/* <div> wrapper for displayed info on page3 */
+.current-activity-complete-container{
+  background-color: #46424D;
+  color: #FFF;
+  height: 37em;
+  margin: 1em 2em;
+  text-align: center;
+}
+
+/* <button> log activity button to <aside> right of page */
+#log-activity-button {
+  border-radius: 2%;
+  font-size: 1em;
+  height: 32px;
+  width: 23%;
+}
+
+/* <section> complete activity page4 */
+.log-activity-page{
+  width: 96%;
+}
+
+/* <div> wrapper for the newly desplayed info on page3 */
+.log-activity-complete-container {
+  background-color: #46424D;
+  color: #FFF;
+  height: 37em;
+  margin: 1em 2em;
+  text-align: center;
+}
+
+/* <button> for create a new activity button */
+#create-activity-button{
+  border-radius: 2%;
+  font-size: 1em;
+  height: 32px;
+  margin-top: 10%;
+  width: 40%;
+}
