@@ -17,7 +17,7 @@
       <header>
         <h2 class="current-activity-title">New Activity</h2>
       </header>
-      <div class="inner-left-content-of-main">
+      <div class="inner-left-content-of-main-page1">
           <p class="select-a-category">Select a category:</p>
           <div class="category-choice-wrapper">
           <section class="category-choice-box study-box">
@@ -38,18 +38,18 @@
         </div>
         <form class="user-paramaters" action="index.html" method="post">
           <label class="title-of-input" for="user-goal">What would you like to accomplish during this time?</label>
-          <input class="users-goals-to-accomplish" type="text" name="user-goal" value="">
+          <input class="users-goals-to-accomplish-input" type="text" name="user-goal" value="">
           <section class="warning" hidden>
             <img class="warning-img" src="assets/warning.svg" alt="Warning image for leaving the input field empty">
             <p class="warning-text">A description is required.</p>
           </section>
           <div class="parent-of-minutes-category">
             <label class="title-of-input-minutes" for="time-in-minutes">Minutes</label>
-            <input class="minutes" type="number" name="time-in-minutes" value="">
+            <input class="minutes-user-input" type="number" name="time-in-minutes" value="">
           </div>
           <div class="parent-of-seconds-category">
             <label class="title-of-input-seconds" for="time-in-seconds">Seconds</label>
-            <input class="seconds" type="number" name="time-in-seconds" value="">
+            <input class="seconds-user-input" type="number" name="time-in-seconds" value="">
           </div>
           <button id="start-activity" type="submit" name="submit-button">START ACTIVITY</button>
         </form>

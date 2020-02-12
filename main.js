@@ -19,9 +19,9 @@ var startActivity = document.getElementById('start-activity');
 var warning = document.querySelector('.warning');
 
 // create a var for minutes and Seconds user goals
-var userGoal = document.querySelector('.users-goals-to-accomplish');
-var minutes = document.querySelector(".minutes");
-var seconds = document.querySelector(".seconds");
+var userGoal = document.querySelector('.users-goals-to-accomplish-input');
+var minutes = document.querySelector(".minutes-user-input");
+var seconds = document.querySelector(".seconds-user-input");
 
 // create a var for all "toggled pages"
 var page1 = document.querySelector('.left-content-of-main');
@@ -97,13 +97,13 @@ function changePage1 () {
   page2UserGoal.innerText = userGoal.value
   page2TimeCounter.innerText = `${minutes.value}:${seconds.value}`;
   switch (selectedCategory) {
-    case "study": 
+    case "study":
       page2StartButton.classList.add('study-timer-border');
       break;
-    case "meditate": 
+    case "meditate":
       page2StartButton.classList.add('meditate-timer-border');
       break;
-    case "exercise": 
+    case "exercise":
       page2StartButton.classList.add('exercise-timer-border');
       break;
     default:
