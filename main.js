@@ -39,105 +39,55 @@ exercise.addEventListener('click', clickExercise);
 startActivity.addEventListener('click', onStartActivity);
 // functions for each of the categorys study, meditate, exersise
 function clickStudy() {
-  study.style.borderColor = "#B3FD78";
-  study.style.color = "#B3FD78";
+  study.classList.add('active');
+  meditate.classList.remove('active');
+  exercise.classList.remove('active');
   lightbulb.hidden = true;
   lightbulbActive.hidden = false;
-
-  meditate.style.borderColor = "#FFF";
-  meditate.style.color = "#FFF";
   lotus.hidden = false;
   lotusActive.hidden = true;
-
-  exercise.style.borderColor = "#FFF";
-  exercise.style.color = "#FFF";
   runningShoe.hidden = false;
   runningShoeActive.hidden = true;
-
   selectedCategory = "study";
 }
 
 function clickMeditate() {
-  meditate.style.borderColor = "#C278FD";
-  meditate.style.color = "#C278FD";
+  meditate.classList.add('active');
+  study.classList.remove('active');
+  exercise.classList.remove('active');
   lotus.hidden = true;
   lotusActive.hidden = false;
-
-  study.style.borderColor = "#FFF";
-  study.style.color = "#FFF";
   lightbulb.hidden = false;
   lightbulbActive.hidden = true;
-
-  exercise.style.borderColor = "#FFF";
-  exercise.style.color = "#FFF";
   runningShoe.hidden = false;
   runningShoeActive.hidden = true;
-
   selectedCategory = "meditate";
 }
 
 function clickExercise() {
-  exercise.style.borderColor = "#FD8078";
-  exercise.style.color = "#FD8078";
+  exercise.classList.add('active');
+  meditate.classList.remove('active');
+  study.classList.remove('active');
   runningShoe.hidden = true;
   runningShoeActive.hidden = false;
-
-  study.style.borderColor = "#FFF";
-  study.style.color = "#FFF";
   lightbulb.hidden = false;
   lightbulbActive.hidden = true;
-
-  meditate.style.borderColor = "#FFF";
-  meditate.style.color = "#FFF";
   lotus.hidden = false;
   lotusActive.hidden = true;
-
   selectedCategory = "exercise";
 }
 
 // function for warning label
 function onStartActivity(event) {
   event.preventDefault();
-  validateCategory()
-
-}
-
-function validateCategory() {
-  if (selectedCategory === null) {
-    warning.hidden = false
+  var validCategory = selectedCategory !== null;
+  var validGoal = userGoal.value !== "";
+  var validMinutes = minutes.value !== "" && minutes.value !== "e";
+  var validSeconds = seconds.value !== "" && seconds.value !== "e";
+  if(validCategory && validGoal && validMinutes && validSeconds) {
+    changePage1();
   } else {
-    warning.hidden = true
-    validateUserGoal()
-  }
-}
-
-function validateUserGoal() {
-  console.log('hello user goal');
-  if (userGoal.value == "") {
-    warning.hidden = false
-  } else {
-    warning.hidden = true
-    validateMinutes();
-  }
-}
-
-function validateMinutes() {
-  console.log("yes");
-  if (minutes.value == "" || minutes.value === "e") {
-    warning.hidden = false
-  } else {
-    warning.hidden = true
-    validateSeconds();
-  }
-}
-
-function validateSeconds() {
-  console.log("yes");
-  if (seconds.value == "" || seconds.value === "e") {
-    warning.hidden = false
-  } else {
-    warning.hidden = true
-    changePage1()
+    warning.hidden = false;
   }
 }
 
@@ -146,51 +96,17 @@ function changePage1 () {
   page2.hidden = false;
   page2UserGoal.innerText = userGoal.value
   page2TimeCounter.innerText = `${minutes.value}:${seconds.value}`;
-  if (selectedCategory === "study") {
-    page2StartButton.classList.add('study-timer-border');
-  }
-  if (selectedCategory === "meditate") {
-    page2StartButton.classList.add('meditate-timer-border');
-  }
-  if (selectedCategory === "exercise") {
-    page2StartButton.classList.add('exercise-timer-border');
-    console.log(page2StartButton.classList);
+  switch (selectedCategory) {
+    case "study": 
+      page2StartButton.classList.add('study-timer-border');
+      break;
+    case "meditate": 
+      page2StartButton.classList.add('meditate-timer-border');
+      break;
+    case "exercise": 
+      page2StartButton.classList.add('exercise-timer-border');
+      break;
+    default:
+      break;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ppp
