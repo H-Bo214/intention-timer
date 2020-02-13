@@ -40,7 +40,7 @@ form {
   width: 96%;
 }
 
-/* <h2> in every page that toggles in left-content-of-main */
+/* <h2> shared class between pages that toggle in left-content-of-main */
 .current-activity-title {
   color: #CBC9CF;
   margin: 0 1.3em;
