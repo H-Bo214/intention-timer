@@ -8,7 +8,7 @@ form {
 }
 
 /* wrapper to main constant header of whole page*/
-.constant-header-of-page{
+.constant-header-of-page {
   background-color: #46424D;
   height: 8%;
   left: 0;
@@ -106,8 +106,8 @@ form {
 
 /* Category choice box active state */
 .study-box.active {
-border-color: #B3FD78;
-color: #B3FD78;
+  border-color: #B3FD78;
+  color: #B3FD78;
 }
 
 /* Category choice box active state */
@@ -122,7 +122,7 @@ color: #B3FD78;
   color: #FD8078;
 }
 
-  /* <p> text for each category box */
+/* <p> text for each category box */
 .p-study,
 .p-meditate,
 .p-exercise {
@@ -135,10 +135,10 @@ color: #B3FD78;
   display: block;
   font-size: 1em;
   margin: 0 0 1.5em 6.5em;
-  }
+}
 
 /* <form><input> what user wants to accomplish */
-.users-accomplishment-input{
+.users-accomplishment-input {
   background: transparent;
   border: none;
   border-bottom: 1px solid#CBC9CF;
@@ -147,22 +147,22 @@ color: #B3FD78;
   margin-left: 9.4em;
   outline: none;
   width: 55em;
-  }
+}
 
 /* <form><section> warning wrapper for error message */
-.warning{
+.warning {
   margin-left: 7em;
 }
 
 /* <form><img> warning error message img */
-.warning-img{
-  display:inline-block;
+.warning-img {
+  display: inline-block;
   width: 0.9em;
 }
 
 /* <form><p> warning error message text */
-.warning-text{
-  display:inline-block;
+.warning-text {
+  display: inline-block;
   font-size: 15px;
 }
 
@@ -180,7 +180,7 @@ color: #B3FD78;
 }
 
 /* <form><input> for minutes */
-.user-minutes-input{
+.user-minutes-input {
   background: transparent;
   border: none;
   border-bottom: 1px solid#CBC9CF;
@@ -205,7 +205,7 @@ color: #B3FD78;
 }
 
 /* <form><input> form seconds */
-.user-seconds-input{
+.user-seconds-input {
   background: transparent;
   border: none;
   border-bottom: 1px solid#CBC9CF;
@@ -217,7 +217,7 @@ color: #B3FD78;
 
 /* <form><button> start activity button */
 #start-activity {
-  color:gray;
+  color: gray;
   border-radius: 4px;
   display: block;
   font-size: 1rem;
@@ -230,9 +230,10 @@ color: #B3FD78;
 
 /* <aside> place for card holder on the right of page */
 .right-content-in-main {
-  border-left:1px solid gray;
+  border-left: 1px solid gray;
   color: #CBC9CF;
-  margin: -1.2em 0 -1.5em 0; /* how can we not use negitives??*/
+  margin: -1.2em 0 -1.5em 0;
+  /* how can we not use negitives??*/
 }
 
 /* <aside><p> text for header of past activities */
@@ -279,13 +280,14 @@ color: #B3FD78;
 }
 
 /* <h2> title for the newly desplayed info on page3 */
-.current-activity-complete-title{
+.current-activity-complete-title {
   color: #CBC9CF;
   font-size: 1.5em;
   margin: 0 1.3em;
 }
+
 /* <div> wrapper for displayed info on page3 */
-.current-activity-complete-container{
+.current-activity-complete-container {
   background-color: #46424D;
   color: #FFF;
   height: 37em;
@@ -311,7 +313,7 @@ color: #B3FD78;
 }
 
 /* <button> for create a new activity button */
-#create-activity-button{
+#create-activity-button {
   border-radius: 2%;
   font-size: 1em;
   height: 32px;
