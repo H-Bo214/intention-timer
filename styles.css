@@ -3,8 +3,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* background of main header of whole page*/
-.header-one{
+form {
+  margin-top: 15%;
+}
+
+/* wrapper to main constant header of whole page*/
+.constant-header-of-page{
   background-color: #46424D;
   height: 8%;
   left: 0;
@@ -15,9 +19,9 @@ body {
 }
 
 /* h1 for the whole page */
-.h1-for-whole-page {
+.h1-constant-header {
   color: #FFF;
-  font-size: 25px;
+  font-size: 160%;
 }
 
 /* <main> main content wrapper*/
@@ -25,49 +29,50 @@ body {
   display: grid;
   grid-template-columns: 4fr 2.2fr;
   height: 35em;
-  margin-top: 6%;
+  margin-top: 5em;
 }
 
-/* <section> all left content of main */
-.left-content-of-main {
+/* <section> all wrappers for toggled pages => hidden */
+.left-content-in-main,
+.current-activity-page2,
+.current-activity-complete-page3,
+.logged-activity-page4 {
   width: 96%;
 }
 
-/* new activity header */
-.h2-header-new-activity {
+/* <h2> in every page that toggles in left-content-of-main */
+.current-activity-title {
   color: #CBC9CF;
-  font-size: 1.5em;
   margin: 0 1.3em;
 }
 
-/* all inner left content of main */
-.inner-left-content-of-main {
+/* <div> page1 inner left content of main after <h2> */
+.inner-left-content-of-main-page1,
+.inner-current-activity-container {
   background-color: #46424D;
-  border-radius: 4px;
+  border-radius: 1%;
   color: #FFF;
   height: 38em;
   margin: 1em 2em;
-
 }
 
-/* <p> select a category: */
-.select-a-category {
-  font-size: 1.1em;
-  margin: 0 0 1% 5.9em;
+/* <p> of 'select a category:' page1 */
+.category-instructor {
+  font-size: 110%;
+  margin: 0 0 0 5.5em;
   padding: 3em 0 0.8em 0;
 }
 
-
 /* <div> wrapper to all category choice boxes */
-.category-choice-wrapper {
+.category-choice-boxes-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0 13%;
+  margin: 0 6em;
 }
 
-/* <section> shared class for category each boxes */
+/* <section> shared class for each category choice box  */
 .category-choice-box {
-  border-radius: 4px;
+  border-radius: 3%;
   border: solid 2px #fff;
   display: inline-block;
   height: 4em;
@@ -75,138 +80,142 @@ body {
   width: 28%;
 }
 
-/* borders for each start activity button on page2 */
+/* called in JS: study border for start activity <button> on page2 */
 .study-timer-border {
   border: 4px solid #B3FD78;
   background-color: #46424D;
 }
 
-/* borders for each start activity button on page2 */
+/* called in JS: meditate border for start activity <button> on page2 */
 .meditate-timer-border {
   border: 4px solid #C278FD;
   background-color: #46424D;
 }
 
-/* borders for each start activity button on page2 */
+/* called in JS: exercise border for start activity <button> on page2  */
 .exercise-timer-border {
   border: 4px solid #FD8078;
   background-color: #46424D;
 }
 
-/* <img> shared class for the img in category boxes */
+/* <img> shared class for the img in category boxes active and inactive*/
 .category-img {
   margin-top: 8px;
   width: 15%;
-  }
+}
 
-  /* <p> for study category box */
-.p-study {
+/* Category choice box active state */
+.study-box.active {
+border-color: #B3FD78;
+color: #B3FD78;
+}
+
+/* Category choice box active state */
+.meditate-box.active {
+  border-color: #C278FD;
+  color: #C278FD;
+}
+
+/* Category choice box active state */
+.exercise-box.active {
+  border-color: #FD8078;
+  color: #FD8078;
+}
+
+  /* <p> text for each category box */
+.p-study,
+.p-meditate,
+.p-exercise {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-/* <p> for meditate category box */
-.p-meditate{
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-/* <p> for exercise category box */
-.p-exercise{
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-/* <form> all of the form */
-.user-paramaters{
-  margin-top: 15%;
-}
-
-/* <label> shared class for label in <form> */
+/* <form><label> shared class for labels */
 .title-of-input {
   display: block;
   font-size: 1em;
-  margin-bottom: 1.5em;
-  padding-left: 13%;
+  margin: 0 0 1.5em 6.5em;
   }
 
-/* <input> what they want to accomplish input*/
-.users-goals-to-accomplish{
+/* <form><input> what user wants to accomplish */
+.users-accomplishment-input{
   background: transparent;
   border: none;
   border-bottom: 1px solid#CBC9CF;
   color: #fff;
   display: block;
-  margin-left: 13%;
+  margin-left: 9.4em;
+  outline: none;
   width: 55em;
   }
 
-/* <section> warning wrapper for error message */
+/* <form><section> warning wrapper for error message */
 .warning{
-  margin-left: 13%;
+  margin-left: 7em;
 }
 
-/* <img> warning error message img */
+/* <form><img> warning error message img */
 .warning-img{
   display:inline-block;
   width: 0.9em;
-  }
+}
 
-/* <p> warning error message text */
+/* <form><p> warning error message text */
 .warning-text{
   display:inline-block;
   font-size: 15px;
-  }
+}
 
-/* <div> wrapper of entire minutes label and input */
-.parent-of-minutes-category {
+/* <form><div> wrapper of entire minutes label and input */
+.wrapper-to-minutes-input {
   display: inline-block;
   margin: 1em 0 0 6em;
 }
 
-/* <label> of minutes in form */
+/* <form><label> for minutes */
 .title-of-input-minutes {
   display: block;
   font-size: 1em;
-  margin-bottom: 2em 0 1.5em 0;
-  padding-left: 4%;
+  margin: 2em 0 1.5em .6em;
 }
 
-/* <input> for minutes in form */
-.minutes{
+/* <form><input> for minutes */
+.user-minutes-input{
   background: transparent;
   border: none;
   border-bottom: 1px solid#CBC9CF;
   color: #fff;
   display: block;
   margin-left: 1em;
+  outline: none;
   width: 23em;
 }
 
-/* <div> wrapper of entire seconds label and input */
-.parent-of-seconds-category {
+/* <form><div> wrapper of entire seconds label and input */
+.wrapper-to-seconds-category {
   display: inline-block;
   margin: 1em 0 0 4em;
 }
 
-/* <label> of seconds in form */
+/* <form><label> for seconds */
 .title-of-input-seconds {
   display: block;
   font-size: 1em;
   margin-bottom: 1.5em;
 }
 
-/* <input> for seconds in form */
-.seconds{
+/* <form><input> form seconds */
+.user-seconds-input{
   background: transparent;
   border: none;
   border-bottom: 1px solid#CBC9CF;
   display: block;
   color: #fff;
+  outline: none;
   width: 25.3em;
 }
 
-/* <button> start activity button */
+/* <form><button> start activity button */
 #start-activity {
   color:gray;
   border-radius: 4px;
@@ -214,26 +223,26 @@ body {
   font-size: 1rem;
   line-height: 2;
   margin: 3em 0 0 31.7em;
-  padding: 0px 18px;
+  padding: 0px 1.3em;
   text-align: center;
   width: 23%;
 }
 
 /* <aside> place for card holder on the right of page */
-.right-content-of-main {
+.right-content-in-main {
   border-left:1px solid gray;
   color: #CBC9CF;
-  margin-top: -6% 0 -8% 0;
+  margin: -1.2em 0 -1.5em 0; /* how can we not use negitives??*/
 }
 
-/* <p> text for header of past activities */
+/* <aside><p> text for header of past activities */
 .past-activities {
   font-size: 1.5em;
-  margin-top: 32px;
+  margin-top: 1em;
   padding-left: 1em;
 }
 
-/* <p> text for indication of where cards are held */
+/* <aside><p> text for indication of where cards are held */
 .user-logged-info {
   margin-left: 3em;
   padding-left: 1em;
@@ -241,30 +250,8 @@ body {
   width: 74%;
 }
 
-/* CHANGE OF PAGES TO PAGE2 */
-/* <section> wrapper of entire page2 */
-.current-activity-page{
-  width: 96%;
-  }
-
-/* <h2> for current activity on page2 and page4 */
-.current-activity-title{
-  color: #CBC9CF;
-  font-size: 1.5em;
-  margin: 0 1.3em;
-  }
-
-/* <div> complete activity page */
-.current-activity-container{
-  background-color: #46424D;
-  color: #FFF;
-  height: 37em;
-  margin: 1em 2em;
-  text-align: center;
-}
-
 /* <p> input from what to accomplish page2 */
-#users-first-input-field {
+#user-accomplishment-goal {
   font-size: 1.5em;
   margin-bottom: 0;
   padding-top: 8%;
@@ -280,20 +267,15 @@ body {
 
 /* <button> start activity */
 /* <div> for complete activity icon */
-#task-start,
+#task-start-button,
 #task-complete {
   border-radius: 50%;
   color: #fff;
   display: block;
   font-size: 1.5em;
-  height: 230px;
-  margin: 5% 0 7% 36.2%;
-  width: 230px;
-}
-
-/* <section> complete activity page3 */
-.current-activity-complete-page{
-  width: 96%;
+  height: 10em;
+  margin: 1em 0 1.3em 12em;
+  width: 10em;
 }
 
 /* <h2> title for the newly desplayed info on page3 */
@@ -315,17 +297,12 @@ body {
 #log-activity-button {
   border-radius: 2%;
   font-size: 1em;
-  height: 32px;
+  height: 2em;
   width: 23%;
 }
 
-/* <section> complete activity page4 */
-.log-activity-page{
-  width: 96%;
-}
-
 /* <div> wrapper for the newly desplayed info on page3 */
-.log-activity-complete-container {
+.log-activity-complete-wrapper {
   background-color: #46424D;
   color: #FFF;
   height: 37em;
@@ -340,22 +317,4 @@ body {
   height: 32px;
   margin-top: 10%;
   width: 40%;
-}
-
-/* Category choice box active state */
-.study-box.active {
-border-color: #B3FD78;
-color: #B3FD78;
-}
-
-/* Category choice box active state */
-.meditate-box.active {
-  border-color: #C278FD;
-  color: #C278FD;
-}
-
-/* Category choice box active state */
-.exercise-box.active {
-  border-color: #FD8078;
-  color: #FD8078;
 }
