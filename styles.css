@@ -162,6 +162,7 @@ form {
 
 /* <form><p> warning error message text */
 .warning-text {
+  color: #EFB7EC;
   display: inline-block;
   font-size: 15px;
 }
