@@ -9,17 +9,17 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header-one">
-    <h1 class="h1-for-whole-page">INTENTION TIMER</h1>
+  <header class="constant-header-of-page">
+    <h1 class="h1-constant-header">INTENTION TIMER</h1>
   </header>
   <main class="all-content-of-page" >
-    <section class="left-content-of-main" >   <!-- hidden page1 -->
+    <section class="left-content-in-main" >   <!-- hidden page1 -->
       <header>
         <h2 class="current-activity-title">New Activity</h2>
       </header>
       <div class="inner-left-content-of-main-page1">
-          <p class="select-a-category">Select a category:</p>
-          <div class="category-choice-wrapper">
+          <p class="category-instructor">Select a category:</p>
+          <div class="category-choice-boxes-wrapper">
           <section class="category-choice-box study-box">
             <img class="category-img lightbulb-img" src="assets/study.svg" alt="Lightbulb illuminating a book">
             <img class="category-img lightbulb-img-active" src='assets/study-active.svg' alt="Lightbulb illuminating a book" hidden>
@@ -36,38 +36,38 @@
             <p class="p-exercise">Exercise</p>
           </section>
         </div>
-        <form class="user-paramaters" action="index.html" method="post">
+        <form action="index.html" method="post">
           <label class="title-of-input" for="user-goal">What would you like to accomplish during this time?</label>
-          <input class="users-goals-to-accomplish-input" type="text" name="user-goal" value="">
+          <input class="users-accomplishment-input" type="text" name="user-goal" value="">
           <section class="warning" hidden>
             <img class="warning-img" src="assets/warning.svg" alt="Warning image for leaving the input field empty">
             <p class="warning-text">A description is required.</p>
           </section>
-          <div class="parent-of-minutes-category">
+          <div class="wrapper-to-minutes-input">
             <label class="title-of-input-minutes" for="time-in-minutes">Minutes</label>
-            <input class="minutes-user-input" type="number" name="time-in-minutes" value="">
+            <input class="user-minutes-input" type="number" name="time-in-minutes" value="">
           </div>
-          <div class="parent-of-seconds-category">
+          <div class="wrapper-to-seconds-category">
             <label class="title-of-input-seconds" for="time-in-seconds">Seconds</label>
-            <input class="seconds-user-input" type="number" name="time-in-seconds" value="">
+            <input class="user-seconds-input" type="number" name="time-in-seconds" value="">
           </div>
           <button id="start-activity" type="submit" name="submit-button">START ACTIVITY</button>
         </form>
       </div>
     </section>
-    <section class="current-activity-page" hidden>
+    <section class="current-activity-page2" hidden>
       <header>
         <h2 class="current-activity-title">Current Activity</h2>
       </header>
-      <div class="current-activity-container">
-        <p id="users-first-input-field"></p>
+      <div class="inner-current-activity-container">
+        <p id="user-accomplishment-goal"></p>
         <p id="time-counter"></p>
-        <button id="task-start" type="button" name="button">START</button>
+        <button id="task-start-button" type="button" name="button">START</button>
       </div>
     </section>
-    <section class="current-activity-complete-page" hidden>
+    <section class="current-activity-complete-page3" hidden>
       <header>
-        <h2 class="current-activity-complete-title">Current Activity</h2>
+        <h2 class="current-activity-title">Current Activity</h2>
       </header>
       <div class="current-activity-complete-container">
         <p id="users-first-input-field"></p>
@@ -76,15 +76,15 @@
         <button id="log-activity-button" type="button" name="log-activity">LOG ACTIVITY</button>
       </div>
     </section>
-    <section class="log-activity-page" hidden>
+    <section class="logged-activity-page4" hidden>
       <header>
         <h2 class="current-activity-title">Completed Activity</h2>
       </header>
-      <div class="log-activity-complete-container">
+      <div class="log-activity-complete-wrapper">
           <button id="create-activity-button" type="button" name="create-activity">CREATE A NEW ACTIVITY</button>
       </div>
     </section>
-    <aside class="right-content-of-main">
+    <aside class="right-content-in-main">
       <p class="past-activities">Past Activities</p>
       <p class="user-logged-info">You haven't logged any activities yet. Complete the form to the left to get started.</p>
     </aside>
