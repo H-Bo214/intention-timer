@@ -1,11 +1,12 @@
-// creating variables for each class of: study, meditate, exersise
+// creating variables for each class of: study, meditate, exersise and their wrapper
 var study = document.querySelector('.study-box');
 var meditate = document.querySelector('.meditate-box');
 var exercise = document.querySelector('.exercise-box');
+var categoryChoiceWrapper = document.querySelector('.category-choice-boxes-wrapper');
 
 // creating variables for the img associated with categories: study, meditate, exercise
-var lightbulb = document.querySelector(".lightbulb-img");
-var lightbulbActive = document.querySelector(".lightbulb-img-active");
+var lightbulb = document.querySelector('.lightbulb-img');
+var lightbulbActive = document.querySelector('.lightbulb-img-active');
 var lotus = document.querySelector('.lotus-img');
 var lotusActive = document.querySelector('.lotus-img-active');
 var runningShoe = document.querySelector('.running-shoe-img');
@@ -19,8 +20,8 @@ var warning = document.querySelector('.warning');
 
 // creating variables for <form>: user accomplishments, minutes and seconds
 var userGoal = document.querySelector('.users-accomplishment-input');
-var minutes = document.querySelector(".user-minutes-input");
-var seconds = document.querySelector(".user-seconds-input");
+var minutes = document.querySelector('.user-minutes-input');
+var seconds = document.querySelector('.user-seconds-input');
 
 // creating variables for all "hidden pages"
 var page1 = document.querySelector('.left-content-in-main');
@@ -31,14 +32,24 @@ var page2UserGoal = document.getElementById('user-accomplishment-goal');
 var page2TimeCounter = document.getElementById('time-counter');
 var page2StartButton = document.getElementById('task-start-button')
 
-// creating addEventListener to each variable that was created for study, meditate, exersise
-study.addEventListener('click', clickStudy);
-meditate.addEventListener('click', clickMeditate);
-exercise.addEventListener('click', clickExercise);
+//creating addEventListener for parent of study, meditate and exersise boxes
+categoryChoiceWrapper.addEventListener('click', categoryChoice);
 
 // creating addEventListener for button: start activity
 startActivity.addEventListener('click', onStartActivity);
 
+// function for EventListener in categoryChoiceWrapper
+function categoryChoice(event) {
+  if(event.target === study){
+    clickStudy();
+  }
+  if(event.target === meditate){
+    clickMeditate();
+  }
+  if(event.target === exercise){
+    clickExercise();
+  }
+}
 // functions for each of the categorys boxes: study, meditate, exersise
 function clickStudy() {
   study.classList.add('active');
@@ -50,7 +61,7 @@ function clickStudy() {
   lotusActive.hidden = true;
   runningShoe.hidden = false;
   runningShoeActive.hidden = true;
-  selectedCategory = "study";
+  selectedCategory = 'study';
 }
 
 function clickMeditate() {
@@ -63,7 +74,7 @@ function clickMeditate() {
   lightbulbActive.hidden = true;
   runningShoe.hidden = false;
   runningShoeActive.hidden = true;
-  selectedCategory = "meditate";
+  selectedCategory = 'meditate';
 }
 
 function clickExercise() {
@@ -76,7 +87,7 @@ function clickExercise() {
   lightbulbActive.hidden = true;
   lotus.hidden = false;
   lotusActive.hidden = true;
-  selectedCategory = "exercise";
+  selectedCategory = 'exercise';
 }
 
 // function for warning label
