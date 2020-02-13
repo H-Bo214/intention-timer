@@ -102,12 +102,13 @@ function onStartActivity(event) {
   event.preventDefault();
   var validCategory = selectedCategory !== null;
   var validGoal = userGoal.value !== "";
-  var validMinutes = minutes.value !== "" && minutes.value !== "e";
-  var validSeconds = seconds.value !== "" && seconds.value !== "e";
+  var validMinutes = minutes.value !== "" && minutes.value !== 'e';
+  var validSeconds = seconds.value !== "" && seconds.value !== 'e';
   if (validCategory && validGoal && validMinutes && validSeconds) {
     changePage1();
   } else {
     warning.hidden = false;
+    userGoal.style.borderBottom = '1px solid #EFB7EC';
   }
 }
 
