@@ -4,13 +4,16 @@ var meditate = document.querySelector('.meditate-box');
 var exercise = document.querySelector('.exercise-box');
 var categoryChoiceWrapper = document.querySelector('.category-choice-boxes-wrapper');
 
-// creating variables for the img associated with categories: study, meditate, exercise
+// creating variables for the img associated within categories: study, meditate, exercise
 var lightbulb = document.querySelector('.lightbulb-img');
 var lightbulbActive = document.querySelector('.lightbulb-img-active');
 var lotus = document.querySelector('.lotus-img');
 var lotusActive = document.querySelector('.lotus-img-active');
 var runningShoe = document.querySelector('.running-shoe-img');
 var runningShoeActive = document.querySelector('.running-shoe-img-active');
+var pStudy = document.querySelector('.p-study');
+var pMeditate = document.querySelector('.p-meditate');
+var pExercise = document.querySelector('.p-exercise');
 
 // creating a variable for null on category boxes
 // creating variables for <form>: <button> & <warning>
@@ -40,16 +43,20 @@ startActivity.addEventListener('click', onStartActivity);
 
 // function for EventListener in categoryChoiceWrapper
 function categoryChoice(event) {
-  if(event.target === study){
+  if (event.target === study || event.target === pStudy || event.target === lightbulb) {
     clickStudy();
+    return
   }
-  if(event.target === meditate){
+  if (event.target === meditate || event.target === pMeditate || event.target === lotus) {
     clickMeditate();
+    return
   }
-  if(event.target === exercise){
+  if (event.target === exercise || event.target === pExercise || event.target === runningShoe) {
     clickExercise();
+    return
   }
 }
+
 // functions for each of the categorys boxes: study, meditate, exersise
 function clickStudy() {
   study.classList.add('active');
@@ -97,7 +104,7 @@ function onStartActivity(event) {
   var validGoal = userGoal.value !== "";
   var validMinutes = minutes.value !== "" && minutes.value !== "e";
   var validSeconds = seconds.value !== "" && seconds.value !== "e";
-  if(validCategory && validGoal && validMinutes && validSeconds) {
+  if (validCategory && validGoal && validMinutes && validSeconds) {
     changePage1();
   } else {
     warning.hidden = false;
@@ -105,7 +112,7 @@ function onStartActivity(event) {
 }
 
 // function to change left content of page1 to page2 
-function changePage1 () {
+function changePage1() {
   page1.hidden = true;
   page2.hidden = false;
   page2UserGoal.innerText = userGoal.value
