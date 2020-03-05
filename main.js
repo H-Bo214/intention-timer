@@ -1,16 +1,10 @@
 // creating variables for each class of: study, meditate, exersise and their wrapper
-var study = document.querySelector('.study-box');
-var meditate = document.querySelector('.meditate-box');
-var exercise = document.querySelector('.exercise-box');
 var categoryChoiceWrapper = document.querySelector('.category-choice-boxes-wrapper');
 
 // creating variables for the img associated within categories: study, meditate, exercise
 var lightbulb = document.querySelector('.lightbulb-img');
-var lightbulbActive = document.querySelector('.lightbulb-img-active');
 var lotus = document.querySelector('.lotus-img');
-var lotusActive = document.querySelector('.lotus-img-active');
 var runningShoe = document.querySelector('.running-shoe-img');
-var runningShoeActive = document.querySelector('.running-shoe-img-active');
 var pStudy = document.querySelector('.p-study');
 var pMeditate = document.querySelector('.p-meditate');
 var pExercise = document.querySelector('.p-exercise');
@@ -37,65 +31,41 @@ var page2StartButton = document.getElementById('task-start-button')
 
 //creating addEventListener for parent of study, meditate and exersise boxes
 categoryChoiceWrapper.addEventListener('click', categoryChoice);
-
-// creating addEventListener for button: start activity
-startActivity.addEventListener('click', onStartActivity);
+var studyHandler = document.querySelector('.study');
+var meditateHandler = document.querySelector('.meditate');
+var exerciseHandler = document.querySelector('.exercise')
 
 // function for EventListener in categoryChoiceWrapper
 function categoryChoice(event) {
-  if (event.target === study || event.target === pStudy || event.target === lightbulb) {
-    clickStudy();
+  meditateHandler.classList.remove('active');
+  exerciseHandler.classList.remove('active');
+  studyHandler.classList.remove('active');
+
+  lotus.src = ('assets/meditate.svg');
+  runningShoe.src = ('assets/exercise.svg');
+  lightbulb.src = ('assets/study.svg');
+
+  if (event.target === studyHandler) {
+    studyHandler.classList.add('active');
+    lightbulb.src = ('assets/study-active.svg');
+    selectedCategory = 'study';
     return
   }
-  if (event.target === meditate || event.target === pMeditate || event.target === lotus) {
-    clickMeditate();
+  if (event.target === meditateHandler) {
+    meditateHandler.classList.add('active');
+    lotus.src =('assets/meditate-active.svg');
+    selectedCategory = 'meditate';
     return
   }
-  if (event.target === exercise || event.target === pExercise || event.target === runningShoe) {
-    clickExercise();
+  if (event.target === exerciseHandler) {
+    exerciseHandler.classList.add('active');
+    runningShoe.src = ('assets/exercise-active.svg');
+    selectedCategory = 'exercise';
     return
   }
 }
-
-// functions for each of the categorys boxes: study, meditate, exersise
-function clickStudy() {
-  study.classList.add('active');
-  meditate.classList.remove('active');
-  exercise.classList.remove('active');
-  lightbulb.hidden = true;
-  lightbulbActive.hidden = false;
-  lotus.hidden = false;
-  lotusActive.hidden = true;
-  runningShoe.hidden = false;
-  runningShoeActive.hidden = true;
-  selectedCategory = 'study';
-}
-
-function clickMeditate() {
-  meditate.classList.add('active');
-  study.classList.remove('active');
-  exercise.classList.remove('active');
-  lotus.hidden = true;
-  lotusActive.hidden = false;
-  lightbulb.hidden = false;
-  lightbulbActive.hidden = true;
-  runningShoe.hidden = false;
-  runningShoeActive.hidden = true;
-  selectedCategory = 'meditate';
-}
-
-function clickExercise() {
-  exercise.classList.add('active');
-  meditate.classList.remove('active');
-  study.classList.remove('active');
-  runningShoe.hidden = true;
-  runningShoeActive.hidden = false;
-  lightbulb.hidden = false;
-  lightbulbActive.hidden = true;
-  lotus.hidden = false;
-  lotusActive.hidden = true;
-  selectedCategory = 'exercise';
-}
+// creating addEventListener for button: start activity
+startActivity.addEventListener('click', onStartActivity);
 
 // function for warning label
 function onStartActivity(event) {
@@ -112,7 +82,7 @@ function onStartActivity(event) {
   }
 }
 
-// function to change left content of page1 to page2 
+// function to change left content of page1 to page2
 function changePage1() {
   page1.hidden = true;
   page2.hidden = false;
